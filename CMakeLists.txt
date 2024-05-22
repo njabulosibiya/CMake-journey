@@ -15,7 +15,7 @@ endif()
 message(STATUS "BUILD SUCCESS") # Message on build success
 
 # create build target for CMakeJourney project
-add_executable(CMakeJourney main.cpp)
+add_executable(${CMAKE_PROJECT_NAME} main.cpp)
 
 # Include directory for header files into the current target
 include_directories(include)
@@ -24,4 +24,4 @@ include_directories(include)
 add_subdirectory(src)
 
 # Link created OBJECT file of source files
-target_link_libraries(CMakeJourney PRIVATE src)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE src)
