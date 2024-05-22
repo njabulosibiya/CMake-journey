@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
-#include "headers/hello.h"
+#include "test_class.h"
 
 using std::string;
 
 int main() {
 
-	hello();
+	HelloCMake myProject("CMakeJourney");
 
+	myProject.getName();
 
 return 0;
 }
