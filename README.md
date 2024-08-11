@@ -2,6 +2,12 @@
 
 ## CMake
 Here is a safe space repository where I learn CMake, CTest & CPack and the likes.
+It's not all about just CMake, this repository also includes (but not limited) the following:
+* Semantic Versioning
+* Git & Github skills
+* Code documentation
+* Package releases
+and various other aspects that will be added as time proceeds. In essence, this is a programming playground.
 
 ## Other
 
