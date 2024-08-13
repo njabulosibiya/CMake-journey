@@ -12,6 +12,7 @@ set(BINARY_NAME "CMakeJourney")
 # All is stored in variables which can be called later in the file
 project(${BINARY_NAME} 
 		VERSION 0.0.4
+		DESCRIPTION "Testing ground for CMake & other programming concepts"
 		LANGUAGES CXX
 )
 

@@ -11,9 +11,12 @@
 
 class Other {
 public:
+	// constructors
 	Other();
 	Other(std::string name);
+	// Mutators
 	void setName(std::string& name);
+	// Accessors
 	std::string getName() const;
 
 private:
