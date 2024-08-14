@@ -1,5 +1,4 @@
-#include "other/other.h"
-
+#include "other.h"
 
 Other::Other() : m_name(" ") {}
 

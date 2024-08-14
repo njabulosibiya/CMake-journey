@@ -1,6 +1,12 @@
 #include <iostream>
 #include <string>
 #include "test_class.h"
+
+/*	
+	Can use "other.h" instead
+	However, using this way helps with readability as it shows where the
+	declaration file is located.
+*/
 #include "other/other.h"
 
 using std::string;

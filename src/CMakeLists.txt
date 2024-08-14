@@ -4,21 +4,24 @@ other.cpp
 # car_maintenence.cpp
 )
 
+target_include_directories(src PUBLIC ../include/)
+target_include_directories(src PUBLIC ../include/other/)
 
 #[=[	
-	Since we are creating a library target, we can include things for our target,
-	things such as header files. This is not necessary & the code can work without
-	the following line, however, each file in src will have to use relative path 
-	when including a header file. Example: #include "../include/include_file.h"
+	Since we are creating a library target (An entirely new & different target), 
+	we can include its dependencies, such as the header files. This IS ENTIRELY 
+	necessary as the files in this library target depend on this include file. 
+	
+	Not including the following line will result in the files in this target not 
+	finding the header files, thus resulting in a compilation error.
 
-	With the below line, relative path is not needed AND it also includes any sub-
-	directories in the include folder as well.
+	If even a single of these files of this target depended on a library, we would 
+	have to include the following line.
+
+	target_include_libraries(src PUBLIC library_name)
+
+	----------------------------
 
 	This current set-up may be far from idea and/or efficient but it works, so I'll 
 	take it as a will and go from here.
 #]=]
-
-target_include_directories(src PUBLIC ../include/)
-
-# Not needed anymore, include directory handled in top-level CMakeLists.txt
-# target_include_directories(src PUBLIC .)

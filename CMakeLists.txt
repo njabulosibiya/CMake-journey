@@ -1,11 +1,20 @@
-message(STATUS "########## EXECUTING SRC ##########")
+message(STATUS "__EXECUTING_SRC__")
 
-# Specify version required for project
+# Specify minimum version required for this project
 cmake_minimum_required(VERSION 3.12)
 
 
 # Constant name for project 
 set(BINARY_NAME "CMakeJourney")
+
+
+######### SYSTEM ENQUIRIES ###########
+
+# Uses pre-populated variables to print message.
+message(STATUS "${CMAKE_SYSTEM_NAME} ${CMAKE_HOST_SYSTEM_VERSION} OS build environment detected")
+
+######### END SYSTEM ENQUIRIES ###########
+
 
 # project details
 # Set project name and stuff
