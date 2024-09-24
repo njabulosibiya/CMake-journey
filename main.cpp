@@ -10,11 +10,11 @@
 *		such as programming in of itself are left to another repo specified for such.
 */
 
-#include <iostream>
 #include <string>
 #include "test_class.h"
 // Uses external string formatting library installed using vcpkg
 #include <fmt/core.h>
+#include <fmt/color.h>
 
 /*	
 	Can use "other.h" instead
@@ -39,9 +39,10 @@ int main() {
 }
 
 void testFunction(std::string append, int something) {
-	std::cout << "Hello World!";
+	fmt::print("Hello World!");
+	fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "Hello, {}!\n", "world");
 
 	if (append != "0")
-		std::cout << append << std::endl;
+		fmt::print(append);
 
 }
