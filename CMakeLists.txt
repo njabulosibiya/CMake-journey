@@ -1,3 +1,5 @@
+list(APPEND CMAKE_MESSAGE_CONTEXT "ROOT")
+
 message(STATUS "__EXECUTING_SRC__")
 
 # Specify minimum version required for this project

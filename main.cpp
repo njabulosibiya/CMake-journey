@@ -10,14 +10,17 @@
 *		such as programming in of itself are left to another repo specified for such.
 */
 
-#include <string>
-#include "test_class.h"
+// DEPENDENCIES
 // Uses external string formatting library installed using vcpkg
 #include <fmt/core.h>
 #include <fmt/color.h>
 
+#include <string>
+#include "test_class.h"
+
+
 /*	
-	Can use "other.h" instead
+	Can use "other.h" instead of using "other/other.h" (The file path)
 	However, using this way helps with readability as it shows where the
 	declaration file is located.
 */
@@ -30,6 +33,7 @@ void testFunction(std::string append = "0", int something = 0);
 int main() {
 	HelloCMake me;
 	Other out("njabulo");
+	Other another("Sibiya");
 
 	fmt::print("fmt"); // Uses fmt library
 	out.getName();
@@ -40,7 +44,7 @@ int main() {
 
 void testFunction(std::string append, int something) {
 	fmt::print("Hello World!");
-	fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "Hello, {}!\n", "world");
+	fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "Hello, \n{}!", "world");
 
 	if (append != "0")
 		fmt::print(append);
